@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora TMB</title>
+  <link rel="stylesheet" href="./public/styles/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="container__img">
+      <img src="./public/images/fitness.svg" alt="">
+    </div>
+    <div class="content active">
+      <form class="content__form">
+        <div class="form__group">
+          <div class="form__input_block">
+            <label class="form__label" for="js-gender">Seu sexo</label>
+            <select class="form__input" id="js-gender">
+              <option value="male">Masculino</option>
+              <option value="famale">Femenino</option>
+            </select>
+          </div>
+          <div class="form__input_block">
+            <label class="form__label" for="js-age">Sua idade</label>
+            <input class="form__input" type="number" id="js-age">
+          </div>
+        </div>
+        <div class="form__group">
+          <div class="form__input_block">
+            <label class="form__label" for="js-height">Sua altura</label>
+            <input class="form__input" id="js-height" placeholder="em cm">
+          </div>
+          <div class="form__input_block">
+            <label class="form__label" for="js-weight">Seu peso</label>
+            <input class="form__input" type="number" id="js-weight" placeholder="em kg">
+          </div>
+        </div>
+        <div class="form__input_block grid">
+          <label class="form__label">Nivel de atividade</label>
+          <div class="grid_opt">
+            <li class="opt" data-value="1.2" id="l-1"> 
+              <img src="./public/images/sedentary.svg" alt="Sedentario">
+              <span>sedentario</span>
+            </li>
+            <li class="opt" data-value="1.55" id="l-2">
+              <img src="./public/images/moderated_activity.svg" alt="Atividade moderada">
+              <span>moderada</span>
+            </li>
+            <li class="opt" data-value="1.725" id="l-3">
+              <img src="./public/images/intense_activity.svg" alt="Atividade intensa">
+              <span>intensa</span>
+            </li>
+          </div>
+          <input type="hidden" id="js-activity_level">
+        </div>
+
+        <button class="form__btn" id="js-form_btn">Calcular!</button>
+      </form>
+    </div>
+
+    <div class="result">
+      <h2 class="result__title">Resultado:</h2>
+      <ul class="result__list">
+        
+      </ul>
+      <a class="result__btn" id="js-back">Voltar</a>
+    </div>
+  </div>
+
+  <script src="./public/js/script.js"></script>
+</body>
+</html>
